@@ -903,7 +903,7 @@ module Git
       restore_git_system_env_variables()
     end
 
-    def command(cmd, opts = [], chdir = true, redirect = '', &block)
+    def command(cmd, opts = [], chdir = true, redirect = '.', &block)
       global_opts = []
       global_opts << "--git-dir=#{@git_dir}" if !@git_dir.nil?
       global_opts << "--work-tree=#{@git_work_dir}" if !@git_work_dir.nil?
